@@ -10,13 +10,9 @@ import Foundation
 
 class GOTBattle {
     
-    private(set) var attacker1: String!
-    private(set) var attacker2: String!
     public private(set) var attackerKingName: String!
     private(set) var defenderKingName: String!
     private(set) var attackerOutcome: String!
-    private(set) var attackerSize: Int!
-    private(set) var defenderSize: Int!
     private(set) var numberOfAttacks: Int = 0
     private(set) var numberOfDefends: Int = 0
     private(set) var numberOfVictory: Int = 0
@@ -32,13 +28,9 @@ class GOTBattle {
 
     
     init(battleInfo: [String : AnyObject]) {
-        attacker1 = battleInfo["attacker_1"] as! String
-        attacker2 = battleInfo["attacker_2"] as! String
         attackerKingName = battleInfo["attacker_king"] as! String
         defenderKingName = battleInfo["defender_king"] as! String
         attackerOutcome = battleInfo["attacker_outcome"] as! String
-        attackerSize = getAttackerorDefenderSizeInt(battleInfo["attacker_size"] as! String)
-        defenderSize = getAttackerorDefenderSizeInt(battleInfo["defender_size"] as! String)
         if !attackerKingName.isEmpty {
             currentAttackKing = King(battle: self, name: attackerKingName)
             GOTBattle.currentAttackingKingsArray.append(currentAttackKing)
