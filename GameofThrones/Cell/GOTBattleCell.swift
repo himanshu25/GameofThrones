@@ -15,7 +15,6 @@ class GOTBattleCell: UITableViewCell {
     @IBOutlet weak var rankLabel: UILabel!
     var viewModel: GOTBattleCellViewModel!
     
-    
     required init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)!
     }

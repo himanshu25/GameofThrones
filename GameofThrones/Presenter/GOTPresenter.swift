@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GOTPresenter: UIViewController, GOTBattleProtocol {
+class GOTPresenter: UIViewController, GOTBattleDataSource, GOTBattleDelegate {
     func didTapCell(_viewModel: GOTBattleCellViewModel) {
         
     }
@@ -17,18 +17,23 @@ class GOTPresenter: UIViewController, GOTBattleProtocol {
     private var battleArray = [GOTBattle]()
     public typealias GOTInfoCompletionBlock = (NSError?, [GOTBattle]?) -> Void
     var dataSource: GOTDataSource?
+    var delegate: GOTDelegateRouter?
     let interactor = GOTDataSource()
+    let router = GOTDelegateRouter()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupDataSource()
+        setupDataSourceAndDelegate()
         setupNavigationBar()
         getBattlesDetail()
     }
     
-    private func setupDataSource() {
+    private func setupDataSourceAndDelegate() {
         interactor.dataSource = self
         contentTable.dataSource = interactor
+        router.delegate = self
+        contentTable.delegate = router
     }
     
     private func setupNavigationBar() {
@@ -37,13 +42,12 @@ class GOTPresenter: UIViewController, GOTBattleProtocol {
     }
     
     private func getBattlesDetail() {
-        let worker = GOTNetworkWorker()
-        worker.getGOTBattleDetail(with: { [weak self] (error, GOTarray) in
+        let networkInteractor = GOTNetworkWorker()
+        networkInteractor.getGOTBattleDetail(with: { [weak self] (error, battleArray) in
             if let strongSelf = self {
-                guard let battleArray = GOTarray else { return }
-                strongSelf.battleArray = battleArray
+                strongSelf.battleArray = battleArray!
                 var battleViewModelArray = [GOTBattleCellViewModel]()
-                for battel in battleArray {
+                for battel in battleArray! {
                     let battleViewModel = GOTBattleCellViewModel(battle: battel)
                     battleViewModelArray.append(battleViewModel)
                 }

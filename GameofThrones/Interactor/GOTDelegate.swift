@@ -9,9 +9,5 @@
 import Foundation
 import UIKit
 
-class GOTDelegate: NSObject, UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
+class GOTDelegate: NSObject, UITableViewDataSource {
 }

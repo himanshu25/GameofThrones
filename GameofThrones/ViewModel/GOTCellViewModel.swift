@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
 class GOTBattleCellViewModel {
     var attackerKing: String!
     var rank: Int!
-    var x: String!
-    private var y: String!
-    private var z: String!
+    var attacks: String!
+    private var defends: String!
+    private var victoryScore: String!
     
     init(battle: GOTBattle) {
         self.attackerKing = battle.attackerKing

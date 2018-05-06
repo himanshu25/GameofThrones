@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-protocol GOTBattleProtocol: class {
+protocol GOTBattleDataSource: class {
     func didTapCell(_viewModel: GOTBattleCellViewModel)
 }
 
 class GOTDataSource: NSObject, UITableViewDataSource {
     var battleViewModelArray = [GOTBattleCellViewModel]()
-    weak var dataSource: GOTBattleProtocol?
+    weak var dataSource: GOTBattleDataSource?
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return battleViewModelArray.count
