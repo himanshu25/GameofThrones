@@ -16,10 +16,17 @@ class GOTBattleCellModel {
     private var defends: String!
     private var victoryScore: String!
     var kingsArray = [King]()
+    var kingNames = Set<String>()
     
     init(battle: GOTBattle) {
         self.attackerKing = battle.attackerKingName
         self.rank = battle.rank
-        self.kingsArray = battle.kingsArray
+        self.kingsArray = GOTBattle.currentAttackingKingsArray
+        for kings in GOTBattle.currentDefendingKingsArray {
+            self.kingsArray.append(kings)
+        }
+        for king in self.kingsArray {
+            kingNames.insert(king.name)
+        }
     }
 }

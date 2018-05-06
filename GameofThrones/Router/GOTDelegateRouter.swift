@@ -15,10 +15,7 @@ protocol GOTBattleDelegate: class {
 
 class GOTDelegateRouter: NSObject, UITableViewDelegate {
     weak var delegate: GOTBattleDelegate?
-    var viewModel: GOTBattleCellModel!
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // show detail vc
-        
-    }
+    var cellModel: GOTBattleCellModel!
+    
+    // Can use it if required
 }

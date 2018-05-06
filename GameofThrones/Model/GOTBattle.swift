@@ -24,8 +24,12 @@ class GOTBattle {
     public var rank : Int!
     public var attackerKing: King!
     public var defenderKing: King!
-    public var kingsArray = [King]()
-    public var currentKing: King!
+    public var kingNames = Set<String>()
+    public static var currentDefendingKingsArray = [King]()
+    public static var currentAttackingKingsArray = [King]()
+    public var currentAttackKing: King!
+    public var currentDefenderKing: King!
+
     
     init(battleInfo: [String : AnyObject]) {
         attacker1 = battleInfo["attacker_1"] as! String
@@ -35,17 +39,18 @@ class GOTBattle {
         attackerOutcome = battleInfo["attacker_outcome"] as! String
         attackerSize = getAttackerorDefenderSizeInt(battleInfo["attacker_size"] as! String)
         defenderSize = getAttackerorDefenderSizeInt(battleInfo["defender_size"] as! String)
-        currentKing = King(battle: self)
-        if kingsArray.count > 0 {
-            for king in kingsArray {
-                if king.name == currentKing.name {
-                    return
-                }
-                else {
-                    kingsArray.append(currentKing)
-                }
-            }
+        if !attackerKingName.isEmpty {
+            currentAttackKing = King(battle: self, name: attackerKingName)
+            GOTBattle.currentAttackingKingsArray.append(currentAttackKing)
+            kingNames.insert(attackerKingName)
         }
+        
+        if !defenderKingName.isEmpty {
+            currentDefenderKing = King(battle: self, name: defenderKingName)
+            GOTBattle.currentDefendingKingsArray.append(currentDefenderKing)
+            kingNames.insert(defenderKingName)
+        }
+        
         let calcualatedRank = GOTRankCalculator(self)
         rank = calcualatedRank.calculateRank(attackerOutCome: attackerOutcome)
     }

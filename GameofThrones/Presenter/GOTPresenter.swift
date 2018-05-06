@@ -49,7 +49,8 @@ class GOTPresenter: UIViewController, GOTBattleDataSource, GOTBattleDelegate {
                 var battleViewModelArray = [GOTBattleCellModel]()
                 for battel in battleArray! {
                     let battleViewModel = GOTBattleCellModel(battle: battel)
-                    battleViewModel.kingsArray = battel.kingsArray
+                    strongSelf.interactor.kingsArray = battleViewModel.kingsArray
+                    strongSelf.interactor.kingNames = battleViewModel.kingNames
                     battleViewModelArray.append(battleViewModel)
                 }
                 strongSelf.interactor.battleViewModelArray = battleViewModelArray
