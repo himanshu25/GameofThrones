@@ -15,6 +15,7 @@
 		A3CA2CD2209EB51400C0211B /* GameofThronesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CD1209EB51400C0211B /* GameofThronesTests.swift */; };
 		A3CA2CDD209EB51400C0211B /* GameofThronesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CDC209EB51400C0211B /* GameofThronesUITests.swift */; };
 		A3CA2CED209EC0B200C0211B /* GOTNetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CEC209EC0B200C0211B /* GOTNetworkWorker.swift */; };
+		A3CA2CEF209EC0E400C0211B /* GOTBattle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CEE209EC0E400C0211B /* GOTBattle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A3CA2CDC209EB51400C0211B /* GameofThronesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameofThronesUITests.swift; sourceTree = "<group>"; };
 		A3CA2CDE209EB51400C0211B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3CA2CEC209EC0B200C0211B /* GOTNetworkWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTNetworkWorker.swift; sourceTree = "<group>"; };
+		A3CA2CEE209EC0E400C0211B /* GOTBattle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTBattle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				A3CA2CC5209EB51400C0211B /* LaunchScreen.storyboard */,
 				A3CA2CC8209EB51400C0211B /* Info.plist */,
 				A3CA2CEC209EC0B200C0211B /* GOTNetworkWorker.swift */,
+				A3CA2CEE209EC0E400C0211B /* GOTBattle.swift */,
 			);
 			path = GameofThrones;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3CA2CEF209EC0E400C0211B /* GOTBattle.swift in Sources */,
 				A3CA2CBF209EB51200C0211B /* ViewController.swift in Sources */,
 				A3CA2CBD209EB51200C0211B /* AppDelegate.swift in Sources */,
 				A3CA2CED209EC0B200C0211B /* GOTNetworkWorker.swift in Sources */,
