@@ -18,12 +18,12 @@ class King {
     var initialRank = 400
     
     init(battle: GOTBattle) {
-        self.name =  battle.attackerKing
-        King.numberOfAttacks = battle.numberOfAttacks
-        King.numberOfDefends = battle.numberOfDefends
-        King.numberOfVictory = battle.numberOfVictory
-        self.outcome = battle.outcome
-        self.rank = getRank()
+        self.name =  battle.attackerKingName
+//        King.numberOfAttacks = battle.numberOfAttacks
+//        King.numberOfDefends = battle.numberOfDefends
+//        King.numberOfVictory = battle.numberOfVictory
+//        self.outcome = battle.outcome
+//        self.rank = getRank()
     }
     
     func getRank() -> Int {

@@ -13,7 +13,9 @@ class GOTBattleCell: UITableViewCell {
     @IBOutlet weak var headerImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var rankLabel: UILabel!
-    var viewModel: GOTBattleCellViewModel!
+    @IBOutlet weak var imagesStackView: UIStackView!
+    var viewModel: GOTBattleCellModel!
+    var kingsArray = [King]()
     
     required init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)!
@@ -33,9 +35,9 @@ class GOTBattleCell: UITableViewCell {
     }
     
     // ViewModel
-    public func setupUI(info: GOTBattleCellViewModel) {
+    public func setupUI(info: GOTBattleCellModel) {
         viewModel = info
-        nameLabel.text = viewModel.attackerKing
         rankLabel.text = "\(viewModel.rank!)"
     }
+
 }

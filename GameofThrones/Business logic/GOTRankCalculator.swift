@@ -24,19 +24,19 @@ class GOTRankCalculator {
     func calculateRank(attackerOutCome: String) -> Int {
         switch attackerOutCome {
         case Result.win.rawValue:
-            return calculateRankForWinner()
+            return calculateRankForWinner(x: 100, y: 200, num: 2)
         case Result.loose.rawValue:
-            return calculateRankForLooser()
+            return calculateRankForLooser(x: 200, y: 100, num: 1)
         default: return 0
         }
     }
     
-    private func calculateRankForWinner() -> Int {
-        return battle.attackerSize * battle.defenderSize
+    private func calculateRankForWinner(x: Int, y: Int, num: Int) -> Int {
+        return (x + y + 2*x*y)/400
     }
     
-    private func calculateRankForLooser() -> Int {
-        return battle.attackerSize * battle.defenderSize
+    private func calculateRankForLooser(x: Int, y: Int, num: Int) -> Int {
+        return (x - y + 2*x*y)/400
     }
     
 }

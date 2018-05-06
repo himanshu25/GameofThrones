@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 protocol GOTBattleDataSource: class {
-    func didTapCell(_viewModel: GOTBattleCellViewModel)
+    func didTapCell(_viewModel: GOTBattleCellModel)
 }
 
 class GOTDataSource: NSObject, UITableViewDataSource {
-    var battleViewModelArray = [GOTBattleCellViewModel]()
+    var battleViewModelArray = [GOTBattleCellModel]()
     weak var dataSource: GOTBattleDataSource?
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

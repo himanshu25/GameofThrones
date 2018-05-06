@@ -156,7 +156,6 @@
 				A3CA2CFB209EC88600C0211B /* Worker */,
 				A3CA2CFA209EC87400C0211B /* Cell */,
 				A3CA2CF9209EC86300C0211B /* Model */,
-				A3CA2CF8209EC85A00C0211B /* ViewModel */,
 				A3CA2CBC209EB51200C0211B /* AppDelegate.swift */,
 				A3CA2CC0209EB51200C0211B /* Main.storyboard */,
 				A3CA2CC3209EB51400C0211B /* Assets.xcassets */,
@@ -184,12 +183,12 @@
 			path = GameofThronesUITests;
 			sourceTree = "<group>";
 		};
-		A3CA2CF8209EC85A00C0211B /* ViewModel */ = {
+		A3CA2CF8209EC85A00C0211B /* CellModel */ = {
 			isa = PBXGroup;
 			children = (
 				A3CA2CF4209EC16300C0211B /* GOTCellViewModel.swift */,
 			);
-			path = ViewModel;
+			path = CellModel;
 			sourceTree = "<group>";
 		};
 		A3CA2CF9209EC86300C0211B /* Model */ = {
@@ -204,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				A3CA2CF2209EC13500C0211B /* GOTBattleCell.swift */,
+				A3CA2CF8209EC85A00C0211B /* CellModel */,
 			);
 			path = Cell;
 			sourceTree = "<group>";

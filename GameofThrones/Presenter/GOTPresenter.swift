@@ -9,7 +9,7 @@
 import UIKit
 
 class GOTPresenter: UIViewController, GOTBattleDataSource, GOTBattleDelegate {
-    func didTapCell(_viewModel: GOTBattleCellViewModel) {
+    func didTapCell(_viewModel: GOTBattleCellModel) {
         
     }
     
@@ -46,9 +46,10 @@ class GOTPresenter: UIViewController, GOTBattleDataSource, GOTBattleDelegate {
         networkInteractor.getGOTBattleDetail(with: { [weak self] (error, battleArray) in
             if let strongSelf = self {
                 strongSelf.battleArray = battleArray!
-                var battleViewModelArray = [GOTBattleCellViewModel]()
+                var battleViewModelArray = [GOTBattleCellModel]()
                 for battel in battleArray! {
-                    let battleViewModel = GOTBattleCellViewModel(battle: battel)
+                    let battleViewModel = GOTBattleCellModel(battle: battel)
+                    battleViewModel.kingsArray = battel.kingsArray
                     battleViewModelArray.append(battleViewModel)
                 }
                 strongSelf.interactor.battleViewModelArray = battleViewModelArray

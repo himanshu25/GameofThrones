@@ -26,6 +26,18 @@ class GameofThronesTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
+    func testcalculateRankForWinner(x: Int, y: Int, num: Int) {
+        
+    }
+    
+    func testcalculateRankForLooser(x: Int, y: Int, num: Int) {
+        
+    }
+    
+    func testshowBattlesDetail() {
+        
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

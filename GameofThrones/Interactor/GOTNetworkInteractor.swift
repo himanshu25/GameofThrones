@@ -15,9 +15,9 @@ class GOTNetworkInteractor {
         worker.getGOTBattleDetail(with: { [weak self] (error, GOTarray) in
             if let strongSelf = self {
                 guard let battleArray = GOTarray else { return }
-                var battleViewModelArray = [GOTBattleCellViewModel]()
+                var battleViewModelArray = [GOTBattleCellModel]()
                 for battel in battleArray {
-                    let battleViewModel = GOTBattleCellViewModel(battle: battel)
+                    let battleViewModel = GOTBattleCellModel(battle: battel)
                     battleViewModelArray.append(battleViewModel)
                 }
             }
