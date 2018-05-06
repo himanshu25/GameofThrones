@@ -8,39 +8,55 @@
 
 import UIKit
 
-class GOTPresenter: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class GOTPresenter: UIViewController, GOTBattleProtocol {
+    func didTapCell(_viewModel: GOTBattleCellViewModel) {
+        
+    }
+    
     @IBOutlet weak var contentTable: UITableView!
-    var gotArray = [GOTBattle]()
+    private var battleArray = [GOTBattle]()
     public typealias GOTInfoCompletionBlock = (NSError?, [GOTBattle]?) -> Void
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gotArray.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = contentTable.dequeueReusableCell(withIdentifier: "GOTCell", for: indexPath) as! GOTBattleCell
-        if gotArray.count > 0 {
-            let viewModel = GOTBattleCellViewModel(battle: gotArray[indexPath.row])
-            cell.viewModel = viewModel
-        }
-        return cell
-    }
-    
+    var dataSource: GOTDataSource?
+    let interactor = GOTDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let interactor = GOTDataSource()
-        // interactor.doSomeThing()
+        setupDataSource()
+        setupNavigationBar()
+        getBattlesDetail()
+    }
+    
+    private func setupDataSource() {
+        interactor.dataSource = self
+        contentTable.dataSource = interactor
+    }
+    
+    private func setupNavigationBar() {
         self.title = "Game of Thrones | Kings"
-        navigationController?.navigationBar.barTintColor = UIColor.yellow
+        navigationController?.navigationBar.barTintColor = .yellow
+    }
+    
+    private func getBattlesDetail() {
         let worker = GOTNetworkWorker()
-        worker.getGotBattleDetail(with: { (error, GOTarray) in
-            self.contentTable.dataSource = self
-            self.contentTable.delegate = self
-            self.contentTable.reloadData()
-            self.gotArray = GOTarray!
+        worker.getGOTBattleDetail(with: { [weak self] (error, GOTarray) in
+            if let strongSelf = self {
+                guard let battleArray = GOTarray else { return }
+                strongSelf.battleArray = battleArray
+                var battleViewModelArray = [GOTBattleCellViewModel]()
+                for battel in battleArray {
+                    let battleViewModel = GOTBattleCellViewModel(battle: battel)
+                    battleViewModelArray.append(battleViewModel)
+                }
+                strongSelf.interactor.battleViewModelArray = battleViewModelArray
+                strongSelf.showBattlesDetail()
+            }
         })
+    }
+    
+    private func showBattlesDetail() {
+        DispatchQueue.main.async {
+            self.contentTable.reloadData()
+        }
     }
 }
 
