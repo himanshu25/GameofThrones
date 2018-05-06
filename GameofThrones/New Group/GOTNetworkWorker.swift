@@ -22,7 +22,6 @@ class GOTNetworkWorker {
                 do {
                     let battleJson = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
                     let battleDictArray = battleJson as? [[String: AnyObject]]
-                    print(battleDictArray)
                     var battleInfoArray = [GOTBattle]()
                     for  battleDict in battleDictArray! {
                         let battle = GOTBattle(battleInfo: battleDict)

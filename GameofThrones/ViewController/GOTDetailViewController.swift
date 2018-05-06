@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-class GOTDetailPresenter: UIViewController {
+class GOTDetailViewController: UIViewController {
     
-    static func viewController() -> GOTDetailPresenter {
+    static func viewController() -> GOTDetailViewController {
         let mainView = UIStoryboard(name: "Main", bundle: nil)
-        let detailVC = mainView.instantiateViewController(withIdentifier: "GOTDetailVC") as! GOTDetailPresenter
+        let detailVC = mainView.instantiateViewController(withIdentifier: "GOTDetailVC") as! GOTDetailViewController
         return detailVC
     }
 }

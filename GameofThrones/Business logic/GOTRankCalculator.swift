@@ -18,7 +18,6 @@ class GOTRankCalculator {
     
     init(_ battle: GOTBattle) {
         self.battle = battle
-        calculateRank(attackerOutCome: battle.attackerOutcome)
     }
     
     func calculateRank(attackerOutCome: String) -> Int {

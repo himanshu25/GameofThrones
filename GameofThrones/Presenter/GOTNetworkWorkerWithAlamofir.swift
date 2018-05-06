@@ -15,23 +15,19 @@ extension GOTNetworkWorker {
         Alamofire.request(url, method: type).responseJSON { response in
             response.result.ifSuccess {
                 DispatchQueue.main.async {
-                    do {
-                        let responseResult = response.result
-                        let resultsDictionary = responseResult.value as? [[String: AnyObject]]
-                        var battleArray = [GOTBattle]()
-                        for  battleDict in resultsDictionary! {
-                            let battle = GOTBattle(battleInfo: battleDict)
-                            battleArray.append(battle)
-                        }
-                        completion(nil, battleArray)
-                    } catch let error as NSError {
-                        completion(error as NSError?, nil)
+                    let responseResult = response.result
+                    let resultsDictionary = responseResult.value as? [[String: AnyObject]]
+                    var battleArray = [GOTBattle]()
+                    for  battleDict in resultsDictionary! {
+                        let battle = GOTBattle(battleInfo: battleDict)
+                        battleArray.append(battle)
                     }
+                    completion(nil, battleArray)
                 }
             }
             response.result.ifFailure {
                 DispatchQueue.main.async {
-                    let code = response.response?.statusCode ?? 0
+                    let _ = response.response?.statusCode ?? 0
                     completion(nil, nil)
                 }
             }

@@ -13,7 +13,7 @@
         <!--Game of Thrones | Kings-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Game of Thrones | Kings" id="BYZ-38-t0r" customClass="GOTPresenter" customModule="GameofThrones" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Game of Thrones | Kings" id="BYZ-38-t0r" customClass="GOTViewController" customModule="GameofThrones" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,29 +68,29 @@
                                                                 <constraint firstAttribute="height" constant="30" id="1Gj-w6-Dp0"/>
                                                             </constraints>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Pyx-1L-HxI">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Pyx-1L-HxI">
                                                             <rect key="frame" x="0.0" y="100" width="212" height="25"/>
                                                             <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Win" translatesAutoresizingMaskIntoConstraints="NO" id="cNo-lr-o5E">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="25"/>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Win" translatesAutoresizingMaskIntoConstraints="NO" id="cNo-lr-o5E">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="23" height="25"/>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="17" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEH-CA-BFG">
-                                                                    <rect key="frame" x="45" y="0.0" width="23" height="25"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEH-CA-BFG">
+                                                                    <rect key="frame" x="38" y="0.0" width="22.5" height="25"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Attack" translatesAutoresizingMaskIntoConstraints="NO" id="lop-ye-YiL">
-                                                                    <rect key="frame" x="83" y="0.0" width="30" height="25"/>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Attack" translatesAutoresizingMaskIntoConstraints="NO" id="lop-ye-YiL">
+                                                                    <rect key="frame" x="75.5" y="0.0" width="23" height="25"/>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="17" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5D-u6-XyH">
-                                                                    <rect key="frame" x="128" y="0.0" width="22.5" height="25"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5D-u6-XyH">
+                                                                    <rect key="frame" x="113.5" y="0.0" width="23" height="25"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Defence" translatesAutoresizingMaskIntoConstraints="NO" id="FWJ-Gu-Kro">
-                                                                    <rect key="frame" x="165.5" y="0.0" width="8.5" height="25"/>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Defence" translatesAutoresizingMaskIntoConstraints="NO" id="FWJ-Gu-Kro">
+                                                                    <rect key="frame" x="151.5" y="0.0" width="22.5" height="25"/>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laV-rx-Y77">
                                                                     <rect key="frame" x="189" y="0.0" width="23" height="25"/>
@@ -120,7 +120,7 @@
                                             <outlet property="imagesStackView" destination="Pyx-1L-HxI" id="Gfa-n7-6st"/>
                                             <outlet property="nameLabel" destination="7G9-id-Xgk" id="Jqe-3J-UDi"/>
                                             <outlet property="rankLabel" destination="mgI-CU-yb0" id="62z-Hb-Mtp"/>
-                                            <segue destination="VuS-dS-95w" kind="push" id="7cc-4v-C4h"/>
+                                            <segue destination="VuS-dS-95w" kind="show" id="7cc-4v-C4h"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -137,12 +137,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="UAA-sz-v16"/>
                     <connections>
-                        <outlet property="contentTable" destination="Jch-lQ-WeP" id="IcG-Id-wbB"/>
+                        <outlet property="contentTable" destination="Jch-lQ-WeP" id="kwj-kI-wve"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="33.733133433283363"/>
+            <point key="canvasLocation" x="1515" y="-569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MSX-Pq-2GU">
@@ -160,7 +160,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jut-qD-rhF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="29.600000000000001" y="692.20389805097454"/>
+            <point key="canvasLocation" x="792" y="-568"/>
         </scene>
         <!--Detail Presenter-->
         <scene sceneID="PVa-sE-ixl">
@@ -285,7 +285,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mqW-L8-oWP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="669.60000000000002" y="31.934032983508249"/>
+            <point key="canvasLocation" x="2214" y="-568"/>
         </scene>
     </scenes>
     <resources>
