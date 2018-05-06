@@ -143,6 +143,7 @@
 		A3CA2CBB209EB51200C0211B /* GameofThrones */ = {
 			isa = PBXGroup;
 			children = (
+				A3CA2D04209EE4CD00C0211B /* Router */,
 				A3CA2CFD209EC8CB00C0211B /* Interactor */,
 				A3CA2CFC209EC8BD00C0211B /* Presenter */,
 				A3CA2CFB209EC88600C0211B /* Worker */,
@@ -222,9 +223,16 @@
 			isa = PBXGroup;
 			children = (
 				A3CA2CF6209EC1C100C0211B /* GOTDatasource.swift */,
-				A3CA2CFE209ECBC300C0211B /* GOTDelegate.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		A3CA2D04209EE4CD00C0211B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A3CA2CFE209ECBC300C0211B /* GOTDelegate.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		EECD6C07ADC61ADAB11B276B /* Frameworks */ = {
