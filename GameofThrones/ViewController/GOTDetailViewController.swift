@@ -10,10 +10,5 @@ import Foundation
 import UIKit
 
 class GOTDetailViewController: UIViewController {
-    
-    static func viewController() -> GOTDetailViewController {
-        let mainView = UIStoryboard(name: "Main", bundle: nil)
-        let detailVC = mainView.instantiateViewController(withIdentifier: "GOTDetailVC") as! GOTDetailViewController
-        return detailVC
-    }
+
 }

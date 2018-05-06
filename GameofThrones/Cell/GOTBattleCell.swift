@@ -14,9 +14,8 @@ class GOTBattleCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var rankLabel: UILabel!
     @IBOutlet weak var imagesStackView: UIStackView!
-    var viewModel: GOTBattleCellModel!
-    var kingsArray = [King]()
-    var kingNames = Set<String>()
+    private var kingsArray = [King]()
+    private var kingNames = Set<String>()
     
     required init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)!
@@ -33,12 +32,6 @@ class GOTBattleCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-    }
-    
-    // ViewModel
-    public func setupUI(info: GOTBattleCellModel) {
-        viewModel = info
-        // rankLabel.text = "\(viewModel.rank!)"
     }
 
 }

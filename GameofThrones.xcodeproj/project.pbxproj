@@ -19,9 +19,7 @@
 		A3CA2CEF209EC0E400C0211B /* GOTBattle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CEE209EC0E400C0211B /* GOTBattle.swift */; };
 		A3CA2CF1209EC10C00C0211B /* GOTRankCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CF0209EC10C00C0211B /* GOTRankCalculator.swift */; };
 		A3CA2CF3209EC13500C0211B /* GOTBattleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CF2209EC13500C0211B /* GOTBattleCell.swift */; };
-		A3CA2CF5209EC16300C0211B /* GOTCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CF4209EC16300C0211B /* GOTCellViewModel.swift */; };
 		A3CA2D06209EE57E00C0211B /* King.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2D05209EE57E00C0211B /* King.swift */; };
-		A3CA2D08209EEE5100C0211B /* GOTDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2D07209EEE5100C0211B /* GOTDetailViewController.swift */; };
 		A3FFAB65209F5277005AA3C9 /* GOTPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FFAB64209F5277005AA3C9 /* GOTPresenter.swift */; };
 		BC72F01E1819D1077D15F45C /* Pods_GameofThrones.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE57A9CA5A0218FA01A0255 /* Pods_GameofThrones.framework */; };
 		E8C673B2E085C97A886B2881 /* Pods_GameofThronesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E31D8AC558B17EDB6C91DCE /* Pods_GameofThronesTests.framework */; };
@@ -69,9 +67,7 @@
 		A3CA2CEE209EC0E400C0211B /* GOTBattle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTBattle.swift; sourceTree = "<group>"; };
 		A3CA2CF0209EC10C00C0211B /* GOTRankCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTRankCalculator.swift; sourceTree = "<group>"; };
 		A3CA2CF2209EC13500C0211B /* GOTBattleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTBattleCell.swift; sourceTree = "<group>"; };
-		A3CA2CF4209EC16300C0211B /* GOTCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTCellViewModel.swift; sourceTree = "<group>"; };
 		A3CA2D05209EE57E00C0211B /* King.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = King.swift; sourceTree = "<group>"; };
-		A3CA2D07209EEE5100C0211B /* GOTDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTDetailViewController.swift; sourceTree = "<group>"; };
 		A3FFAB64209F5277005AA3C9 /* GOTPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTPresenter.swift; sourceTree = "<group>"; };
 		C8FF5D0D5B7DF2A00C60365D /* Pods-GameofThrones.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameofThrones.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameofThrones/Pods-GameofThrones.release.xcconfig"; sourceTree = "<group>"; };
 		CEC4A57994826134060C87D7 /* Pods-GameofThronesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameofThronesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameofThronesUITests/Pods-GameofThronesUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,14 +172,6 @@
 			path = GameofThronesUITests;
 			sourceTree = "<group>";
 		};
-		A3CA2CF8209EC85A00C0211B /* CellModel */ = {
-			isa = PBXGroup;
-			children = (
-				A3CA2CF4209EC16300C0211B /* GOTCellViewModel.swift */,
-			);
-			path = CellModel;
-			sourceTree = "<group>";
-		};
 		A3CA2CF9209EC86300C0211B /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,7 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				A3CA2CF2209EC13500C0211B /* GOTBattleCell.swift */,
-				A3CA2CF8209EC85A00C0211B /* CellModel */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -221,7 +208,6 @@
 		A3FFAB66209F63C5005AA3C9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				A3CA2D07209EEE5100C0211B /* GOTDetailViewController.swift */,
 				A3CA2CBE209EB51200C0211B /* GOTViewController.swift */,
 			);
 			path = ViewController;
@@ -543,8 +529,6 @@
 				A3CA2CBF209EB51200C0211B /* GOTViewController.swift in Sources */,
 				A3CA2D06209EE57E00C0211B /* King.swift in Sources */,
 				A3CA2CBD209EB51200C0211B /* AppDelegate.swift in Sources */,
-				A3CA2D08209EEE5100C0211B /* GOTDetailViewController.swift in Sources */,
-				A3CA2CF5209EC16300C0211B /* GOTCellViewModel.swift in Sources */,
 				A3CA2CF1209EC10C00C0211B /* GOTRankCalculator.swift in Sources */,
 				A3CA2CED209EC0B200C0211B /* GOTNetworkWorker.swift in Sources */,
 				A3FFAB65209F5277005AA3C9 /* GOTPresenter.swift in Sources */,
