@@ -109,18 +109,17 @@
 		A3CA2CBB209EB51200C0211B /* GameofThrones */ = {
 			isa = PBXGroup;
 			children = (
+				A3CA2CFD209EC8CB00C0211B /* Interactor */,
+				A3CA2CFC209EC8BD00C0211B /* Presenter */,
+				A3CA2CFB209EC88600C0211B /* Worker */,
+				A3CA2CFA209EC87400C0211B /* Cell */,
+				A3CA2CF9209EC86300C0211B /* Model */,
+				A3CA2CF8209EC85A00C0211B /* ViewModel */,
 				A3CA2CBC209EB51200C0211B /* AppDelegate.swift */,
-				A3CA2CBE209EB51200C0211B /* GOTPresenter.swift */,
 				A3CA2CC0209EB51200C0211B /* Main.storyboard */,
 				A3CA2CC3209EB51400C0211B /* Assets.xcassets */,
 				A3CA2CC5209EB51400C0211B /* LaunchScreen.storyboard */,
 				A3CA2CC8209EB51400C0211B /* Info.plist */,
-				A3CA2CEC209EC0B200C0211B /* GOTNetworkWorker.swift */,
-				A3CA2CEE209EC0E400C0211B /* GOTBattle.swift */,
-				A3CA2CF0209EC10C00C0211B /* GOTRankCalculator.swift */,
-				A3CA2CF2209EC13500C0211B /* GOTBattleCell.swift */,
-				A3CA2CF4209EC16300C0211B /* GOTCellViewModel.swift */,
-				A3CA2CF6209EC1C100C0211B /* GOTInteractor.swift */,
 			);
 			path = GameofThrones;
 			sourceTree = "<group>";
@@ -141,6 +140,55 @@
 				A3CA2CDE209EB51400C0211B /* Info.plist */,
 			);
 			path = GameofThronesUITests;
+			sourceTree = "<group>";
+		};
+		A3CA2CF8209EC85A00C0211B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A3CA2CF4209EC16300C0211B /* GOTCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A3CA2CF9209EC86300C0211B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A3CA2CEE209EC0E400C0211B /* GOTBattle.swift */,
+				A3CA2CF0209EC10C00C0211B /* GOTRankCalculator.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A3CA2CFA209EC87400C0211B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A3CA2CF2209EC13500C0211B /* GOTBattleCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A3CA2CFB209EC88600C0211B /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				A3CA2CEC209EC0B200C0211B /* GOTNetworkWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		A3CA2CFC209EC8BD00C0211B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A3CA2CBE209EB51200C0211B /* GOTPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A3CA2CFD209EC8CB00C0211B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				A3CA2CF6209EC1C100C0211B /* GOTInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
