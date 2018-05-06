@@ -14,6 +14,7 @@
 		A3CA2CC7209EB51400C0211B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3CA2CC5209EB51400C0211B /* LaunchScreen.storyboard */; };
 		A3CA2CD2209EB51400C0211B /* GameofThronesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CD1209EB51400C0211B /* GameofThronesTests.swift */; };
 		A3CA2CDD209EB51400C0211B /* GameofThronesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CDC209EB51400C0211B /* GameofThronesUITests.swift */; };
+		A3CA2CED209EC0B200C0211B /* GOTNetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CEC209EC0B200C0211B /* GOTNetworkWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		A3CA2CD8209EB51400C0211B /* GameofThronesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameofThronesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3CA2CDC209EB51400C0211B /* GameofThronesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameofThronesUITests.swift; sourceTree = "<group>"; };
 		A3CA2CDE209EB51400C0211B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3CA2CEC209EC0B200C0211B /* GOTNetworkWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTNetworkWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				A3CA2CC3209EB51400C0211B /* Assets.xcassets */,
 				A3CA2CC5209EB51400C0211B /* LaunchScreen.storyboard */,
 				A3CA2CC8209EB51400C0211B /* Info.plist */,
+				A3CA2CEC209EC0B200C0211B /* GOTNetworkWorker.swift */,
 			);
 			path = GameofThrones;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				A3CA2CBF209EB51200C0211B /* ViewController.swift in Sources */,
 				A3CA2CBD209EB51200C0211B /* AppDelegate.swift in Sources */,
+				A3CA2CED209EC0B200C0211B /* GOTNetworkWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
