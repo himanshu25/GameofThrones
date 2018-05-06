@@ -16,6 +16,7 @@
 		A3CA2CDD209EB51400C0211B /* GameofThronesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CDC209EB51400C0211B /* GameofThronesUITests.swift */; };
 		A3CA2CED209EC0B200C0211B /* GOTNetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CEC209EC0B200C0211B /* GOTNetworkWorker.swift */; };
 		A3CA2CEF209EC0E400C0211B /* GOTBattle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CEE209EC0E400C0211B /* GOTBattle.swift */; };
+		A3CA2CF1209EC10C00C0211B /* GOTRankCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CF0209EC10C00C0211B /* GOTRankCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		A3CA2CDE209EB51400C0211B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3CA2CEC209EC0B200C0211B /* GOTNetworkWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTNetworkWorker.swift; sourceTree = "<group>"; };
 		A3CA2CEE209EC0E400C0211B /* GOTBattle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTBattle.swift; sourceTree = "<group>"; };
+		A3CA2CF0209EC10C00C0211B /* GOTRankCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTRankCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				A3CA2CC8209EB51400C0211B /* Info.plist */,
 				A3CA2CEC209EC0B200C0211B /* GOTNetworkWorker.swift */,
 				A3CA2CEE209EC0E400C0211B /* GOTBattle.swift */,
+				A3CA2CF0209EC10C00C0211B /* GOTRankCalculator.swift */,
 			);
 			path = GameofThrones;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				A3CA2CEF209EC0E400C0211B /* GOTBattle.swift in Sources */,
 				A3CA2CBF209EB51200C0211B /* ViewController.swift in Sources */,
 				A3CA2CBD209EB51200C0211B /* AppDelegate.swift in Sources */,
+				A3CA2CF1209EC10C00C0211B /* GOTRankCalculator.swift in Sources */,
 				A3CA2CED209EC0B200C0211B /* GOTNetworkWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
