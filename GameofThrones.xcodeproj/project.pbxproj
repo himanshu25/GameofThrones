@@ -19,7 +19,8 @@
 		A3CA2CF1209EC10C00C0211B /* GOTRankCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CF0209EC10C00C0211B /* GOTRankCalculator.swift */; };
 		A3CA2CF3209EC13500C0211B /* GOTBattleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CF2209EC13500C0211B /* GOTBattleCell.swift */; };
 		A3CA2CF5209EC16300C0211B /* GOTCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CF4209EC16300C0211B /* GOTCellViewModel.swift */; };
-		A3CA2CF7209EC1C100C0211B /* GOTInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CF6209EC1C100C0211B /* GOTInteractor.swift */; };
+		A3CA2CF7209EC1C100C0211B /* GOTDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CF6209EC1C100C0211B /* GOTDatasource.swift */; };
+		A3CA2CFF209ECBC300C0211B /* GOTDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CFE209ECBC300C0211B /* GOTDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +59,8 @@
 		A3CA2CF0209EC10C00C0211B /* GOTRankCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTRankCalculator.swift; sourceTree = "<group>"; };
 		A3CA2CF2209EC13500C0211B /* GOTBattleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTBattleCell.swift; sourceTree = "<group>"; };
 		A3CA2CF4209EC16300C0211B /* GOTCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTCellViewModel.swift; sourceTree = "<group>"; };
-		A3CA2CF6209EC1C100C0211B /* GOTInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTInteractor.swift; sourceTree = "<group>"; };
+		A3CA2CF6209EC1C100C0211B /* GOTDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTDatasource.swift; sourceTree = "<group>"; };
+		A3CA2CFE209ECBC300C0211B /* GOTDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,7 +188,8 @@
 		A3CA2CFD209EC8CB00C0211B /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				A3CA2CF6209EC1C100C0211B /* GOTInteractor.swift */,
+				A3CA2CF6209EC1C100C0211B /* GOTDatasource.swift */,
+				A3CA2CFE209ECBC300C0211B /* GOTDelegate.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -322,10 +325,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3CA2CFF209ECBC300C0211B /* GOTDelegate.swift in Sources */,
 				A3CA2CF3209EC13500C0211B /* GOTBattleCell.swift in Sources */,
 				A3CA2CEF209EC0E400C0211B /* GOTBattle.swift in Sources */,
 				A3CA2CBF209EB51200C0211B /* GOTPresenter.swift in Sources */,
-				A3CA2CF7209EC1C100C0211B /* GOTInteractor.swift in Sources */,
+				A3CA2CF7209EC1C100C0211B /* GOTDatasource.swift in Sources */,
 				A3CA2CBD209EB51200C0211B /* AppDelegate.swift in Sources */,
 				A3CA2CF5209EC16300C0211B /* GOTCellViewModel.swift in Sources */,
 				A3CA2CF1209EC10C00C0211B /* GOTRankCalculator.swift in Sources */,

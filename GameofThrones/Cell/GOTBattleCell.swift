@@ -13,7 +13,7 @@ class GOTBattleCell: UITableViewCell {
     @IBOutlet weak var headerImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var rankLabel: UILabel!
-    var gotInfo: GOTBattle!
+    var viewModel: GOTBattleCellViewModel!
     
     
     required init(coder aDecoder: NSCoder!) {
@@ -22,12 +22,10 @@ class GOTBattleCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        // setupUI(info: gotInfo)
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // setupUI(info: gotInfo)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -36,12 +34,9 @@ class GOTBattleCell: UITableViewCell {
     }
     
     // ViewModel
-    public func setupUI(info: GOTBattle) {
-        gotInfo = info
-        nameLabel.text = gotInfo.attackerKing
-        rankLabel.text = "\(gotInfo.rank!)"
-    }
-    func fhjfdfd () {
-        
+    public func setupUI(info: GOTBattleCellViewModel) {
+        viewModel = info
+        nameLabel.text = viewModel.attackerKing
+        rankLabel.text = "\(viewModel.rank!)"
     }
 }

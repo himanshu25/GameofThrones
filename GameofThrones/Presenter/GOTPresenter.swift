@@ -21,9 +21,8 @@ class GOTPresenter: UIViewController, UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = contentTable.dequeueReusableCell(withIdentifier: "GOTCell", for: indexPath) as! GOTBattleCell
         if gotArray.count > 0 {
-//            let viewModel = viewModel(
-//                cell.viewModel = viewModel
-//                cell.setupUI(info: <#T##GOTBattle#>)
+            let viewModel = GOTBattleCellViewModel(battle: gotArray[indexPath.row])
+            cell.viewModel = viewModel
         }
         return cell
     }
@@ -31,7 +30,7 @@ class GOTPresenter: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let interactor = GOTInteractor()
+        let interactor = GOTDataSource()
         // interactor.doSomeThing()
         self.title = "Game of Thrones | Kings"
         navigationController?.navigationBar.barTintColor = UIColor.yellow

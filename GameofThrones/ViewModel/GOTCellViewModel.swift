@@ -8,9 +8,15 @@
 
 import Foundation
 
-class GOTCellViewModel {
+class GOTBattleCellViewModel {
+    var attackerKing: String!
+    var rank: Int!
+    var x: String!
+    private var y: String!
+    private var z: String!
     
     init(battle: GOTBattle) {
-        
+        self.attackerKing = battle.attackerKing
+        self.rank = battle.rank
     }
 }
