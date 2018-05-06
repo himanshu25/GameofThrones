@@ -10,21 +10,21 @@ import Foundation
 
 class GOTBattle {
     
+    public private(set) var outcome: String!
+    public private(set) var rank : Int!
+    public private(set) var attackerKing: King!
+    public private(set) var defenderKing: King!
+    public private(set) var kingNames = Set<String>()
     public private(set) var attackerKingName: String!
     private(set) var defenderKingName: String!
     private(set) var attackerOutcome: String!
     private(set) var numberOfAttacks: Int = 0
     private(set) var numberOfDefends: Int = 0
     private(set) var numberOfVictory: Int = 0
-    public var outcome: String!
-    public var rank : Int!
-    public var attackerKing: King!
-    public var defenderKing: King!
-    public var kingNames = Set<String>()
     public static var currentDefendingKingsArray = [King]()
     public static var currentAttackingKingsArray = [King]()
-    public var currentAttackKing: King!
-    public var currentDefenderKing: King!
+    public private(set) var currentAttackKing: King!
+    public private(set) var currentDefenderKing: King!
 
     
     init(battleInfo: [String : AnyObject]) {

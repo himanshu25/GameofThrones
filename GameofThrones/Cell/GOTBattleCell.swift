@@ -14,6 +14,7 @@ class GOTBattleCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var rankLabel: UILabel!
     @IBOutlet weak var imagesStackView: UIStackView!
+    
     private var kingsArray = [King]()
     private var kingNames = Set<String>()
     
@@ -31,7 +32,6 @@ class GOTBattleCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
     }
 
 }

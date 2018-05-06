@@ -31,19 +31,19 @@ class GOTBattlePresenter {
     }
     
     func setupView() {
-        interactor.getGOTBattleDetail(with: {(error, GOTarray) in
+        interactor.getGOTBattleDetail(with: { [weak self] (error, GOTarray) in
             guard let battlesArray = GOTarray else { return }
-            for battle in battlesArray {
-                if !battle.attackerKingName.isEmpty {
-                    self.kingsList.insert(battle.currentAttackKing.name)
+            if let strongSelf = self {
+                for battle in battlesArray {
+                    if !battle.attackerKingName.isEmpty {
+                        strongSelf.kingsList.insert(battle.currentAttackKing.name)
+                    }
+                    if !battle.defenderKingName.isEmpty {
+                        strongSelf.kingsList.insert(battle.currentDefenderKing.name)
+                    }
                 }
-                if !battle.defenderKingName.isEmpty {
-                    self.kingsList.insert(battle.currentDefenderKing.name)
-                }
+                strongSelf.delegate?.reloadList()
             }
-            self.delegate?.reloadList()
         })
     }
-    
-    
 }

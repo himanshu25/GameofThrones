@@ -32,24 +32,14 @@ class GOTViewController: UIViewController, UITableViewDataSource, UITableViewDel
         navigationController?.navigationBar.barTintColor = .yellow
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.getCount()
-    }
-    
-    func reloadList() {
+    private func showBattlesDetail() {
         DispatchQueue.main.async {
             self.contentTable.reloadData()
         }
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "GOTCell", for: indexPath) as! GOTBattleCell
-        let king = presenter.getKingAtIndex(index: indexPath.row)
-        cell.nameLabel.text = king
-        return cell
-    }
-    
-    private func showBattlesDetail() {
+    // Presenter delegate
+    func reloadList() {
         DispatchQueue.main.async {
             self.contentTable.reloadData()
         }
