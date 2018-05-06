@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+class GOTCellViewModel {
+    
+    init(battle: GOTBattle) {
+        
+    }
+}
