@@ -19,7 +19,6 @@ class GOTBattle {
     public var rank : Int!
     
     init(battleInfo: [String : AnyObject]) {
-        // extension over dict
         attacker1 = battleInfo["attacker_1"] as! String
         attacker2 = battleInfo["attacker_2"] as! String
         attackerKing = battleInfo["attacker_king"] as! String
@@ -27,7 +26,6 @@ class GOTBattle {
         attackerSize = getAttackerorDefenderSizeInt(battleInfo["attacker_size"] as! String)
         defenderSize = getAttackerorDefenderSizeInt(battleInfo["defender_size"] as! String)
         let calcualatedRank = GOTRankCalculator(self)
-        // computed property
         rank = calcualatedRank.calculateRank(attackerOutCome: attackerOutcome)
     }
     

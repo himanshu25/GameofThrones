@@ -1,0 +1,6 @@
+framework module Pods_GameofThronesUITests {
+  umbrella header "Pods-GameofThronesUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

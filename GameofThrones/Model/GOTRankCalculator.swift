@@ -8,10 +8,14 @@
 
 import Foundation
 
+enum Result: String {
+    case win = "win"
+    case loose = "loose"
+}
+
 class GOTRankCalculator {
     let battle: GOTBattle!
     
-    // shared instance    ..... havve GOT battle object itself
     init(_ battle: GOTBattle) {
         self.battle = battle
         calculateRank(attackerOutCome: battle.attackerOutcome)
@@ -19,9 +23,9 @@ class GOTRankCalculator {
     
     func calculateRank(attackerOutCome: String) -> Int {
         switch attackerOutCome {
-        case "win":
+        case Result.win.rawValue:
             return calculateRankForWinner()
-        case "Loose":
+        case Result.loose.rawValue:
             return calculateRankForLooser()
         default: return 0
         }
