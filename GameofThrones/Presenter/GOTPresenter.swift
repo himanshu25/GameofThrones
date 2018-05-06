@@ -17,9 +17,9 @@ class GOTPresenter: UIViewController, GOTBattleDataSource, GOTBattleDelegate {
     private var battleArray = [GOTBattle]()
     public typealias GOTInfoCompletionBlock = (NSError?, [GOTBattle]?) -> Void
     var dataSource: GOTDataSource?
-    var delegate: GOTDelegateRouter?
+    var delegate: GOTRouter?
     let interactor = GOTDataSource()
-    let router = GOTDelegateRouter()
+    let router = GOTRouter()
 
     
     override func viewDidLoad() {

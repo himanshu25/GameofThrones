@@ -13,7 +13,7 @@ protocol GOTBattleDelegate: class {
     func didTapCell(_viewModel: GOTBattleCellModel)
 }
 
-class GOTDelegateRouter: NSObject, UITableViewDelegate {
+class GOTRouter: NSObject, UITableViewDelegate {
     weak var delegate: GOTBattleDelegate?
     var cellModel: GOTBattleCellModel!
     

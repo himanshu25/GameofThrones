@@ -21,7 +21,7 @@
 		A3CA2CF3209EC13500C0211B /* GOTBattleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CF2209EC13500C0211B /* GOTBattleCell.swift */; };
 		A3CA2CF5209EC16300C0211B /* GOTCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CF4209EC16300C0211B /* GOTCellViewModel.swift */; };
 		A3CA2CF7209EC1C100C0211B /* GOTDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CF6209EC1C100C0211B /* GOTDatasource.swift */; };
-		A3CA2CFF209ECBC300C0211B /* GOTDelegateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CFE209ECBC300C0211B /* GOTDelegateRouter.swift */; };
+		A3CA2CFF209ECBC300C0211B /* GOTRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2CFE209ECBC300C0211B /* GOTRouter.swift */; };
 		A3CA2D01209EDCDE00C0211B /* GOTNetworkWorkerWithAlamofir.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2D00209EDCDE00C0211B /* GOTNetworkWorkerWithAlamofir.swift */; };
 		A3CA2D06209EE57E00C0211B /* King.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2D05209EE57E00C0211B /* King.swift */; };
 		A3CA2D08209EEE5100C0211B /* GOTDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA2D07209EEE5100C0211B /* GOTDetailPresenter.swift */; };
@@ -74,7 +74,7 @@
 		A3CA2CF2209EC13500C0211B /* GOTBattleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTBattleCell.swift; sourceTree = "<group>"; };
 		A3CA2CF4209EC16300C0211B /* GOTCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTCellViewModel.swift; sourceTree = "<group>"; };
 		A3CA2CF6209EC1C100C0211B /* GOTDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTDatasource.swift; sourceTree = "<group>"; };
-		A3CA2CFE209ECBC300C0211B /* GOTDelegateRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTDelegateRouter.swift; sourceTree = "<group>"; };
+		A3CA2CFE209ECBC300C0211B /* GOTRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTRouter.swift; sourceTree = "<group>"; };
 		A3CA2D00209EDCDE00C0211B /* GOTNetworkWorkerWithAlamofir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTNetworkWorkerWithAlamofir.swift; sourceTree = "<group>"; };
 		A3CA2D05209EE57E00C0211B /* King.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = King.swift; sourceTree = "<group>"; };
 		A3CA2D07209EEE5100C0211B /* GOTDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTDetailPresenter.swift; sourceTree = "<group>"; };
@@ -238,7 +238,7 @@
 		A3CA2D04209EE4CD00C0211B /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				A3CA2CFE209ECBC300C0211B /* GOTDelegateRouter.swift */,
+				A3CA2CFE209ECBC300C0211B /* GOTRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -555,7 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3CA2D01209EDCDE00C0211B /* GOTNetworkWorkerWithAlamofir.swift in Sources */,
-				A3CA2CFF209ECBC300C0211B /* GOTDelegateRouter.swift in Sources */,
+				A3CA2CFF209ECBC300C0211B /* GOTRouter.swift in Sources */,
 				A3CA2CF3209EC13500C0211B /* GOTBattleCell.swift in Sources */,
 				A3CA2CEF209EC0E400C0211B /* GOTBattle.swift in Sources */,
 				A3CA2CBF209EB51200C0211B /* GOTPresenter.swift in Sources */,
